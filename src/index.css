@@ -2,41 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* VastraVerse Admin Panel Design System - Eco-friendly & Sustainable Theme
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Eco-friendly green-based palette */
+    --background: 120 25% 98%;
+    --foreground: 200 20% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 200 20% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 200 20% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary green accent - sustainable/eco feeling */
+    --primary: 142 71% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 142 45% 85%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary muted greens */
+    --secondary: 142 30% 95%;
+    --secondary-foreground: 200 20% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Neutral greys for structure */
+    --muted: 210 10% 96%;
+    --muted-foreground: 200 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 142 30% 92%;
+    --accent-foreground: 200 20% 15%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Alert colors - coral for warnings */
+    --destructive: 14 100% 57%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Warning/CTA - mustard yellow */
+    --warning: 45 93% 47%;
+    --warning-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Success states */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
 
-    --radius: 0.5rem;
+    --border: 142 25% 90%;
+    --input: 142 25% 90%;
+    --ring: 142 71% 45%;
+
+    --radius: 0.75rem;
+
+    /* Custom eco-specific colors */
+    --eco-green-50: 142 45% 95%;
+    --eco-green-100: 142 45% 90%;
+    --eco-green-500: 142 71% 45%;
+    --eco-green-600: 142 71% 40%;
+    
+    /* Gradients */
+    --gradient-eco: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+    
+    /* Shadows */
+    --shadow-eco: 0 4px 12px hsl(var(--primary) / 0.15);
+    --shadow-soft: 0 2px 8px hsl(200 20% 15% / 0.08);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s ease;
 
     --sidebar-background: 0 0% 98%;
 
