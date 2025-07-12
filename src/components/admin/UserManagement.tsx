@@ -12,8 +12,36 @@ import {
   AlertTriangle,
   Ban,
   UserCheck,
-  Download
+  Download,
+  Edit,
+  Trash2,
+  UserX,
+  Shield,
+  CheckCircle
 } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 import {
   Table,
   TableBody,
@@ -256,319 +284,17 @@ const mockUsers = [
     reputation: 4.6,
     location: "Ahmedabad, India",
     avatar: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=100&h=100&fit=crop&crop=face"
-  },
-  {
-    id: 21,
-    name: "Arjun Dey",
-    email: "arjun.dey@email.com",
-    joinDate: "2024-03-18",
-    swapCount: 5,
-    status: "new",
-    reputation: 3.8,
-    location: "Kolkata, India",
-    avatar: "https://images.unsplash.com/photo-1521119989659-a83eee488004?w=100&h=100&fit=crop&crop=face"
-  },
-  {
-    id: 22,
-    name: "Simran Ahuja",
-    email: "simran.ahuja@email.com",
-    joinDate: "2024-01-12",
-    swapCount: 28,
-    status: "active",
-    reputation: 4.9,
-    location: "Amritsar, India",
-    avatar: "https://images.unsplash.com/photo-1506863530036-1efeddceb993?w=100&h=100&fit=crop&crop=face"
-  },
-  {
-    id: 23,
-    name: "Yash Agarwal",
-    email: "yash.agarwal@email.com",
-    joinDate: "2024-02-25",
-    swapCount: 10,
-    status: "active",
-    reputation: 4.2,
-    location: "Agra, India",
-    avatar: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=100&h=100&fit=crop&crop=face"
-  },
-  {
-    id: 24,
-    name: "Trisha Nambiar",
-    email: "trisha.nambiar@email.com",
-    joinDate: "2024-03-14",
-    swapCount: 8,
-    status: "active",
-    reputation: 4.1,
-    location: "Kochi, India",
-    avatar: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=100&h=100&fit=crop&crop=face"
-  },
-  {
-    id: 25,
-    name: "Sahil Rastogi",
-    email: "sahil.rastogi@email.com",
-    joinDate: "2024-01-08",
-    swapCount: 24,
-    status: "active",
-    reputation: 4.8,
-    location: "Meerut, India",
-    avatar: "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=100&h=100&fit=crop&crop=face"
-  },
-  {
-    id: 26,
-    name: "Nidhi Chauhan",
-    email: "nidhi.chauhan@email.com",
-    joinDate: "2024-02-18",
-    swapCount: 15,
-    status: "active",
-    reputation: 4.4,
-    location: "Dehradun, India"
-  },
-  {
-    id: 27,
-    name: "Manav Shetty",
-    email: "manav.shetty@email.com",
-    joinDate: "2024-03-06",
-    swapCount: 9,
-    status: "active",
-    reputation: 4.0,
-    location: "Mangalore, India"
-  },
-  {
-    id: 28,
-    name: "Ria Sen",
-    email: "ria.sen@email.com",
-    joinDate: "2024-01-26",
-    swapCount: 20,
-    status: "active",
-    reputation: 4.5,
-    location: "Kolkata, India"
-  },
-  {
-    id: 29,
-    name: "Harshit Jain",
-    email: "harshit.jain@email.com",
-    joinDate: "2024-02-09",
-    swapCount: 16,
-    status: "warning",
-    reputation: 3.7,
-    location: "Indore, India"
-  },
-  {
-    id: 30,
-    name: "Sana Khan",
-    email: "sana.khan@email.com",
-    joinDate: "2024-03-11",
-    swapCount: 7,
-    status: "active",
-    reputation: 4.2,
-    location: "Bhopal, India"
-  },
-  {
-    id: 31,
-    name: "Abhishek Das",
-    email: "abhishek.das@email.com",
-    joinDate: "2024-01-19",
-    swapCount: 23,
-    status: "active",
-    reputation: 4.7,
-    location: "Guwahati, India"
-  },
-  {
-    id: 32,
-    name: "Avni Solanki",
-    email: "avni.solanki@email.com",
-    joinDate: "2024-02-28",
-    swapCount: 11,
-    status: "active",
-    reputation: 4.3,
-    location: "Rajkot, India"
-  },
-  {
-    id: 33,
-    name: "Kartik Menon",
-    email: "kartik.menon@email.com",
-    joinDate: "2024-03-16",
-    swapCount: 4,
-    status: "new",
-    reputation: 3.9,
-    location: "Trivandrum, India"
-  },
-  {
-    id: 34,
-    name: "Swati Mishra",
-    email: "swati.mishra@email.com",
-    joinDate: "2024-01-14",
-    swapCount: 26,
-    status: "active",
-    reputation: 4.8,
-    location: "Bhopal, India"
-  },
-  {
-    id: 35,
-    name: "Rehan Siddiqui",
-    email: "rehan.siddiqui@email.com",
-    joinDate: "2024-02-21",
-    swapCount: 14,
-    status: "active",
-    reputation: 4.4,
-    location: "Lucknow, India"
-  },
-  {
-    id: 36,
-    name: "Divya Gupta",
-    email: "divya.gupta@email.com",
-    joinDate: "2024-03-07",
-    swapCount: 8,
-    status: "active",
-    reputation: 4.1,
-    location: "Noida, India"
-  },
-  {
-    id: 37,
-    name: "Karan Sethi",
-    email: "karan.sethi@email.com",
-    joinDate: "2024-01-31",
-    swapCount: 18,
-    status: "active",
-    reputation: 4.5,
-    location: "Ludhiana, India"
-  },
-  {
-    id: 38,
-    name: "Anjali Rane",
-    email: "anjali.rane@email.com",
-    joinDate: "2024-02-13",
-    swapCount: 12,
-    status: "active",
-    reputation: 4.3,
-    location: "Nashik, India"
-  },
-  {
-    id: 39,
-    name: "Mohit Rao",
-    email: "mohit.rao@email.com",
-    joinDate: "2024-03-19",
-    swapCount: 3,
-    status: "new",
-    reputation: 3.6,
-    location: "Mysore, India"
-  },
-  {
-    id: 40,
-    name: "Natasha Pillai",
-    email: "natasha.pillai@email.com",
-    joinDate: "2024-01-16",
-    swapCount: 25,
-    status: "active",
-    reputation: 4.8,
-    location: "Thiruvananthapuram, India"
-  },
-  {
-    id: 41,
-    name: "Vikas Yadav",
-    email: "vikas.yadav@email.com",
-    joinDate: "2024-02-24",
-    swapCount: 13,
-    status: "banned",
-    reputation: 2.8,
-    location: "Ghaziabad, India"
-  },
-  {
-    id: 42,
-    name: "Kritika Ghosh",
-    email: "kritika.ghosh@email.com",
-    joinDate: "2024-03-02",
-    swapCount: 9,
-    status: "active",
-    reputation: 4.0,
-    location: "Siliguri, India"
-  },
-  {
-    id: 43,
-    name: "Aman Lakhani",
-    email: "aman.lakhani@email.com",
-    joinDate: "2024-01-27",
-    swapCount: 21,
-    status: "active",
-    reputation: 4.6,
-    location: "Udaipur, India"
-  },
-  {
-    id: 44,
-    name: "Rupal Dave",
-    email: "rupal.dave@email.com",
-    joinDate: "2024-02-15",
-    swapCount: 16,
-    status: "active",
-    reputation: 4.4,
-    location: "Vadodara, India"
-  },
-  {
-    id: 45,
-    name: "Pranav Vora",
-    email: "pranav.vora@email.com",
-    joinDate: "2024-03-13",
-    swapCount: 6,
-    status: "active",
-    reputation: 4.1,
-    location: "Surat, India"
-  },
-  {
-    id: 46,
-    name: "Sneha Chatterjee",
-    email: "sneha.chatterjee@email.com",
-    joinDate: "2024-01-21",
-    swapCount: 22,
-    status: "active",
-    reputation: 4.7,
-    location: "Durgapur, India"
-  },
-  {
-    id: 47,
-    name: "Dev Sharma",
-    email: "dev.sharma@email.com",
-    joinDate: "2024-02-26",
-    swapCount: 10,
-    status: "warning",
-    reputation: 3.8,
-    location: "Shimla, India"
-  },
-  {
-    id: 48,
-    name: "Lavanya Singh",
-    email: "lavanya.singh@email.com",
-    joinDate: "2024-03-17",
-    swapCount: 5,
-    status: "new",
-    reputation: 3.9,
-    location: "Ranchi, India"
-  },
-  {
-    id: 49,
-    name: "Tushar Rathi",
-    email: "tushar.rathi@email.com",
-    joinDate: "2024-01-29",
-    swapCount: 19,
-    status: "active",
-    reputation: 4.5,
-    location: "Jodhpur, India"
-  },
-  {
-    id: 50,
-    name: "Alisha Fernandes",
-    email: "alisha.fernandes@email.com",
-    joinDate: "2024-02-11",
-    swapCount: 17,
-    status: "active",
-    reputation: 4.6,
-    location: "Goa, India"
   }
 ];
 
 export function UserManagement() {
   const [searchTerm, setSearchTerm] = useState("");
   const [statusFilter, setStatusFilter] = useState("all");
+  const [selectedUser, setSelectedUser] = useState<typeof mockUsers[0] | null>(null);
+  const [users, setUsers] = useState(mockUsers);
+  const { toast } = useToast();
 
-  const filteredUsers = mockUsers.filter(user => {
+  const filteredUsers = users.filter(user => {
     const matchesSearch = user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          user.email.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesStatus = statusFilter === "all" || user.status === statusFilter;
@@ -576,26 +302,63 @@ export function UserManagement() {
   });
 
   const getStatusBadge = (status: string) => {
-    const config = {
-      active: { variant: "default" as const, className: "bg-primary text-primary-foreground" },
-      warning: { variant: "secondary" as const, className: "bg-warning text-warning-foreground" },
-      banned: { variant: "destructive" as const, className: "" },
-      new: { variant: "secondary" as const, className: "bg-eco-100 text-foreground" }
-    };
-    
-    const { variant, className } = config[status as keyof typeof config] || config.active;
+    const variants = {
+      active: "default",
+      banned: "destructive",
+      warning: "secondary",
+      new: "outline"
+    } as const;
     
     return (
-      <Badge variant={variant} className={className}>
+      <Badge variant={variants[status as keyof typeof variants] || "secondary"}>
         {status}
       </Badge>
     );
   };
 
   const getReputationColor = (reputation: number) => {
-    if (reputation >= 4.5) return "text-primary";
-    if (reputation >= 3.5) return "text-warning";
+    if (reputation >= 4.5) return "text-success";
+    if (reputation >= 4.0) return "text-primary";
+    if (reputation >= 3.0) return "text-warning";
     return "text-destructive";
+  };
+
+  const handleStatusChange = (userId: number, newStatus: string) => {
+    setUsers(prev => prev.map(user => 
+      user.id === userId ? { ...user, status: newStatus } : user
+    ));
+    
+    const user = users.find(u => u.id === userId);
+    toast({
+      title: "Status Updated",
+      description: `${user?.name}'s status has been changed to ${newStatus}`,
+    });
+  };
+
+  const handleBanUser = (userId: number) => {
+    handleStatusChange(userId, "banned");
+  };
+
+  const handleUnbanUser = (userId: number) => {
+    handleStatusChange(userId, "active");
+  };
+
+  const handleWarnUser = (userId: number) => {
+    handleStatusChange(userId, "warning");
+  };
+
+  const handleDeleteUser = (userId: number) => {
+    setUsers(prev => prev.filter(user => user.id !== userId));
+    const user = users.find(u => u.id === userId);
+    toast({
+      title: "User Removed",
+      description: `${user?.name} has been permanently removed from the platform`,
+      variant: "destructive",
+    });
+  };
+
+  const handleViewProfile = (user: typeof mockUsers[0]) => {
+    setSelectedUser(user);
   };
 
   return (
@@ -628,7 +391,7 @@ export function UserManagement() {
         <Card>
           <CardContent className="p-6">
             <div className="flex items-center gap-2">
-              <Users className="h-5 w-5 text-eco-500" />
+              <Users className="h-5 w-5 text-success" />
               <div>
                 <p className="text-2xl font-bold">247</p>
                 <p className="text-sm text-muted-foreground">New This Week</p>
@@ -748,23 +511,53 @@ export function UserManagement() {
                     <TableCell className="text-right">
                       <DropdownMenu>
                         <DropdownMenuTrigger asChild>
-                          <Button variant="ghost" size="sm">
+                          <Button variant="ghost" className="h-8 w-8 p-0">
                             <MoreHorizontal className="h-4 w-4" />
                           </Button>
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent align="end">
-                          <DropdownMenuItem>
+                        <DropdownMenuContent align="end" className="bg-card border border-border">
+                          <DropdownMenuItem onClick={() => handleViewProfile(user)}>
                             <Eye className="mr-2 h-4 w-4" />
                             View Profile
                           </DropdownMenuItem>
-                          <DropdownMenuItem>
+                          <DropdownMenuItem onClick={() => handleWarnUser(user.id)}>
                             <AlertTriangle className="mr-2 h-4 w-4" />
                             Warn User
                           </DropdownMenuItem>
-                          <DropdownMenuItem className="text-destructive">
-                            <Ban className="mr-2 h-4 w-4" />
-                            {user.status === "banned" ? "Unban User" : "Ban User"}
-                          </DropdownMenuItem>
+                          {user.status === "banned" ? (
+                            <DropdownMenuItem onClick={() => handleUnbanUser(user.id)}>
+                              <CheckCircle className="mr-2 h-4 w-4" />
+                              Unban User
+                            </DropdownMenuItem>
+                          ) : (
+                            <DropdownMenuItem onClick={() => handleBanUser(user.id)} className="text-destructive">
+                              <Ban className="mr-2 h-4 w-4" />
+                              Ban User
+                            </DropdownMenuItem>
+                          )}
+                          <AlertDialog>
+                            <AlertDialogTrigger asChild>
+                              <DropdownMenuItem onSelect={(e) => e.preventDefault()} className="text-destructive">
+                                <Trash2 className="mr-2 h-4 w-4" />
+                                Delete Permanently
+                              </DropdownMenuItem>
+                            </AlertDialogTrigger>
+                            <AlertDialogContent>
+                              <AlertDialogHeader>
+                                <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+                                <AlertDialogDescription>
+                                  This action cannot be undone. This will permanently delete {user.name}'s 
+                                  account and remove all their data from our servers.
+                                </AlertDialogDescription>
+                              </AlertDialogHeader>
+                              <AlertDialogFooter>
+                                <AlertDialogCancel>Cancel</AlertDialogCancel>
+                                <AlertDialogAction onClick={() => handleDeleteUser(user.id)} className="bg-destructive text-destructive-foreground hover:bg-destructive/90">
+                                  Delete
+                                </AlertDialogAction>
+                              </AlertDialogFooter>
+                            </AlertDialogContent>
+                          </AlertDialog>
                         </DropdownMenuContent>
                       </DropdownMenu>
                     </TableCell>
@@ -775,6 +568,144 @@ export function UserManagement() {
           </div>
         </CardContent>
       </Card>
+
+      {/* User Profile Dialog */}
+      <Dialog open={!!selectedUser} onOpenChange={() => setSelectedUser(null)}>
+        <DialogContent className="max-w-2xl">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-3">
+              {selectedUser?.avatar ? (
+                <img 
+                  src={selectedUser.avatar} 
+                  alt={selectedUser.name}
+                  className="w-12 h-12 rounded-full object-cover"
+                />
+              ) : (
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                  <Users className="h-6 w-6 text-primary" />
+                </div>
+              )}
+              <div>
+                <h3 className="text-lg font-semibold">{selectedUser?.name}</h3>
+                <p className="text-sm text-muted-foreground">{selectedUser?.email}</p>
+              </div>
+            </DialogTitle>
+          </DialogHeader>
+          
+          {selectedUser && (
+            <div className="space-y-6">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <Label className="text-sm font-medium">Status</Label>
+                  <div className="mt-1">
+                    {getStatusBadge(selectedUser.status)}
+                  </div>
+                </div>
+                <div>
+                  <Label className="text-sm font-medium">Reputation</Label>
+                  <p className={`mt-1 font-semibold ${getReputationColor(selectedUser.reputation)}`}>
+                    {selectedUser.reputation}/5.0
+                  </p>
+                </div>
+                <div>
+                  <Label className="text-sm font-medium">Join Date</Label>
+                  <p className="mt-1 text-sm">{selectedUser.joinDate}</p>
+                </div>
+                <div>
+                  <Label className="text-sm font-medium">Total Swaps</Label>
+                  <p className="mt-1 text-sm font-semibold">{selectedUser.swapCount}</p>
+                </div>
+                <div className="col-span-2">
+                  <Label className="text-sm font-medium">Location</Label>
+                  <p className="mt-1 text-sm">{selectedUser.location}</p>
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                <Label className="text-sm font-medium">Admin Actions</Label>
+                <div className="flex flex-wrap gap-2">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => handleWarnUser(selectedUser.id)}
+                  >
+                    <AlertTriangle className="h-4 w-4 mr-2" />
+                    Issue Warning
+                  </Button>
+                  
+                  {selectedUser.status === "banned" ? (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => handleUnbanUser(selectedUser.id)}
+                    >
+                      <CheckCircle className="h-4 w-4 mr-2" />
+                      Unban User
+                    </Button>
+                  ) : (
+                    <Button
+                      variant="destructive"
+                      size="sm"
+                      onClick={() => handleBanUser(selectedUser.id)}
+                    >
+                      <Ban className="h-4 w-4 mr-2" />
+                      Ban User
+                    </Button>
+                  )}
+                  
+                  <AlertDialog>
+                    <AlertDialogTrigger asChild>
+                      <Button variant="destructive" size="sm">
+                        <Trash2 className="h-4 w-4 mr-2" />
+                        Delete Permanently
+                      </Button>
+                    </AlertDialogTrigger>
+                    <AlertDialogContent>
+                      <AlertDialogHeader>
+                        <AlertDialogTitle>Delete User Account</AlertDialogTitle>
+                        <AlertDialogDescription>
+                          This will permanently delete {selectedUser.name}'s account and all associated data. 
+                          This action cannot be undone.
+                        </AlertDialogDescription>
+                      </AlertDialogHeader>
+                      <AlertDialogFooter>
+                        <AlertDialogCancel>Cancel</AlertDialogCancel>
+                        <AlertDialogAction 
+                          onClick={() => {
+                            handleDeleteUser(selectedUser.id);
+                            setSelectedUser(null);
+                          }}
+                          className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+                        >
+                          Delete Account
+                        </AlertDialogAction>
+                      </AlertDialogFooter>
+                    </AlertDialogContent>
+                  </AlertDialog>
+                </div>
+              </div>
+
+              <div>
+                <Label className="text-sm font-medium">Admin Notes</Label>
+                <Textarea 
+                  placeholder="Add notes about this user..." 
+                  className="mt-1"
+                  rows={3}
+                />
+              </div>
+            </div>
+          )}
+          
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setSelectedUser(null)}>
+              Close
+            </Button>
+            <Button>
+              Save Changes
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

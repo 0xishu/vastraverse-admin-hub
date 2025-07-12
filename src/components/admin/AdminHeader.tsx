@@ -11,13 +11,24 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 export function AdminHeader() {
   const [isDark, setIsDark] = useState(false);
+  const [notificationCount, setNotificationCount] = useState(3);
+  const { toast } = useToast();
 
   const toggleDarkMode = () => {
     setIsDark(!isDark);
     // In a real app, this would toggle the dark class on document.documentElement
+  };
+
+  const handleNotificationClick = () => {
+    toast({
+      title: "Notifications",
+      description: `You have ${notificationCount} new notifications`,
+    });
+    setNotificationCount(0);
   };
 
   return (
@@ -47,15 +58,40 @@ export function AdminHeader() {
           </Button>
 
           {/* Notifications */}
-          <Button variant="ghost" size="sm" className="relative p-2">
-            <Bell className="h-4 w-4" />
-            <Badge 
-              variant="destructive" 
-              className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center p-0 text-xs"
-            >
-              3
-            </Badge>
-          </Button>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="sm" className="relative p-2" onClick={handleNotificationClick}>
+                <Bell className="h-4 w-4" />
+                {notificationCount > 0 && (
+                  <Badge 
+                    variant="destructive" 
+                    className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center p-0 text-xs"
+                  >
+                    {notificationCount}
+                  </Badge>
+                )}
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="w-80 bg-card border border-border">
+              <DropdownMenuLabel>Notifications</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem className="flex flex-col items-start p-3">
+                <div className="font-medium">New User Registration</div>
+                <div className="text-sm text-muted-foreground">Ananya Iyer just joined the platform</div>
+                <div className="text-xs text-muted-foreground">2 minutes ago</div>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="flex flex-col items-start p-3">
+                <div className="font-medium">Content Report</div>
+                <div className="text-sm text-muted-foreground">Inappropriate listing reported by Rahul Mehta</div>
+                <div className="text-xs text-muted-foreground">15 minutes ago</div>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="flex flex-col items-start p-3">
+                <div className="font-medium">System Alert</div>
+                <div className="text-sm text-muted-foreground">High server load detected</div>
+                <div className="text-xs text-muted-foreground">1 hour ago</div>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
 
           {/* Profile Dropdown */}
           <DropdownMenu>

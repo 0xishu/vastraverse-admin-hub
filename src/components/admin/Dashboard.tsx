@@ -62,37 +62,51 @@ const recentActivity = [
   {
     id: 1,
     type: "swap_completed",
-    description: "Emma Wilson completed a swap with Alex Chen",
+    description: "Ananya Iyer completed a swap with Rahul Mehta",
     time: "2 minutes ago",
     status: "completed"
   },
   {
     id: 2,
     type: "new_listing",
-    description: "Sarah Kim listed a Vintage Denim Jacket",
+    description: "Mehak Kaur listed a Vintage Denim Jacket",
     time: "5 minutes ago",
     status: "approved"
   },
   {
     id: 3,
     type: "report_submitted",
-    description: "Inappropriate content reported by Mike Johnson",
+    description: "Inappropriate content reported by Aarav Desai",
     time: "12 minutes ago",
     status: "pending"
   },
   {
     id: 4,
     type: "user_joined",
-    description: "New user Amanda Garcia joined the platform",
+    description: "New user Nikita Sharma joined the platform",
     time: "1 hour ago",
     status: "active"
   },
   {
     id: 5,
     type: "swap_requested",
-    description: "David Lee requested a swap for Organic Cotton T-Shirt",
+    description: "Kabir Nanda requested a swap for Organic Cotton T-Shirt",
     time: "2 hours ago",
     status: "pending"
+  },
+  {
+    id: 6,
+    type: "new_listing",
+    description: "Shruti Menon listed a Traditional Kurta",
+    time: "3 hours ago",
+    status: "approved"
+  },
+  {
+    id: 7,
+    type: "swap_completed",
+    description: "Zoya Qureshi completed a swap with Rohan Verma",
+    time: "4 hours ago",
+    status: "completed"
   }
 ];
 
