@@ -97,6 +97,146 @@ const mockFeedback = [
     date: "2024-03-10",
     status: "escalated",
     sentiment: "negative"
+  },
+  {
+    id: 7,
+    user: "Farhan Shaikh",
+    rating: 4,
+    feedback: "Great community of fashion enthusiasts. Found some amazing vintage pieces!",
+    category: "Community",
+    date: "2024-03-09",
+    status: "responded",
+    sentiment: "positive"
+  },
+  {
+    id: 8,
+    user: "Isha Reddy",
+    rating: 3,
+    feedback: "App interface could be more intuitive. Sometimes hard to navigate categories.",
+    category: "User Interface",
+    date: "2024-03-08",
+    status: "pending",
+    sentiment: "neutral"
+  },
+  {
+    id: 9,
+    user: "Deepak Malhotra",
+    rating: 5,
+    feedback: "Love how this promotes sustainable fashion. Swapped my entire wardrobe!",
+    category: "Sustainability",
+    date: "2024-03-07",
+    status: "resolved",
+    sentiment: "positive"
+  },
+  {
+    id: 10,
+    user: "Priya Bhattacharya",
+    rating: 2,
+    feedback: "Had issues with user verification. Some profiles seem fake.",
+    category: "Security",
+    date: "2024-03-06",
+    status: "escalated",
+    sentiment: "negative"
+  },
+  {
+    id: 11,
+    user: "Neeraj Kapoor",
+    rating: 4,
+    feedback: "Really helpful for finding rare designer pieces. Recommendation system works well.",
+    category: "Discovery",
+    date: "2024-03-05",
+    status: "responded",
+    sentiment: "positive"
+  },
+  {
+    id: 12,
+    user: "Sanya Roy",
+    rating: 3,
+    feedback: "Notification system needs work. Often miss important swap updates.",
+    category: "Notifications",
+    date: "2024-03-04",
+    status: "pending",
+    sentiment: "neutral"
+  },
+  {
+    id: 13,
+    user: "Vedant Kulkarni",
+    rating: 5,
+    feedback: "Perfect for college students! Affordable way to refresh wardrobe regularly.",
+    category: "Value Proposition",
+    date: "2024-03-03",
+    status: "resolved",
+    sentiment: "positive"
+  },
+  {
+    id: 14,
+    user: "Pooja Patel",
+    rating: 1,
+    feedback: "Customer support is very slow to respond to complaints and issues.",
+    category: "Customer Support",
+    date: "2024-03-02",
+    status: "escalated",
+    sentiment: "negative"
+  },
+  {
+    id: 15,
+    user: "Arjun Dey",
+    rating: 4,
+    feedback: "Photo upload quality could be better. Sometimes images appear blurry.",
+    category: "Technical",
+    date: "2024-03-01",
+    status: "pending",
+    sentiment: "positive"
+  },
+  {
+    id: 16,
+    user: "Simran Ahuja",
+    rating: 5,
+    feedback: "Best fashion exchange platform! Clean interface and reliable users.",
+    category: "Platform Experience",
+    date: "2024-02-28",
+    status: "resolved",
+    sentiment: "positive"
+  },
+  {
+    id: 17,
+    user: "Yash Agarwal",
+    rating: 2,
+    feedback: "Location-based matching needs improvement. Too many distant users suggested.",
+    category: "Matching Algorithm",
+    date: "2024-02-27",
+    status: "pending",
+    sentiment: "negative"
+  },
+  {
+    id: 18,
+    user: "Trisha Nambiar",
+    rating: 4,
+    feedback: "Love the environmental impact tracking! Motivates me to swap more.",
+    category: "Gamification",
+    date: "2024-02-26",
+    status: "responded",
+    sentiment: "positive"
+  },
+  {
+    id: 19,
+    user: "Sahil Rastogi",
+    rating: 3,
+    feedback: "Payment protection system needs enhancement for high-value items.",
+    category: "Payment Security",
+    date: "2024-02-25",
+    status: "pending",
+    sentiment: "neutral"
+  },
+  {
+    id: 20,
+    user: "Nidhi Chauhan",
+    rating: 5,
+    feedback: "Amazing way to discover new styles! The community is so helpful and friendly.",
+    category: "Community",
+    date: "2024-02-24",
+    status: "resolved",
+    sentiment: "positive"
   }
 ];
 

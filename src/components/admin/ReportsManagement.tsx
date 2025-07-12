@@ -103,6 +103,160 @@ const mockReports = [
     reportDate: "2024-03-10",
     status: "investigating",
     priority: "medium"
+  },
+  {
+    id: 7,
+    reportedBy: "Kritika Ghosh",
+    reportedUser: "Aman Lakhani",
+    reportedItem: "Damaged Sneakers",
+    reason: "Item Damaged",
+    description: "Received shoes with significant wear not mentioned in listing",
+    reportDate: "2024-03-09",
+    status: "pending",
+    priority: "medium"
+  },
+  {
+    id: 8,
+    reportedBy: "Rupal Dave",
+    reportedUser: "Pranav Vora",
+    reportedItem: "Harassment Messages",
+    reason: "User Harassment",
+    description: "User sending inappropriate private messages repeatedly",
+    reportDate: "2024-03-08",
+    status: "investigating",
+    priority: "high"
+  },
+  {
+    id: 9,
+    reportedBy: "Sneha Chatterjee",
+    reportedUser: "Lavanya Singh",
+    reportedItem: "Wrong Size Listing",
+    reason: "Misleading Information",
+    description: "Item listed as Medium but received Large size",
+    reportDate: "2024-03-07",
+    status: "resolved",
+    priority: "low"
+  },
+  {
+    id: 10,
+    reportedBy: "Tushar Rathi",
+    reportedUser: "Alisha Fernandes",
+    reportedItem: "Payment Issue",
+    reason: "Transaction Problem",
+    description: "User demanding additional payment after agreeing to swap",
+    reportDate: "2024-03-06",
+    status: "pending",
+    priority: "high"
+  },
+  {
+    id: 11,
+    reportedBy: "Farhan Shaikh",
+    reportedUser: "Isha Reddy",
+    reportedItem: "Duplicate Listings",
+    reason: "Spam Content",
+    description: "Same item posted multiple times with different descriptions",
+    reportDate: "2024-03-05",
+    status: "investigating",
+    priority: "medium"
+  },
+  {
+    id: 12,
+    reportedBy: "Priya Bhattacharya",
+    reportedUser: "Neeraj Kapoor",
+    reportedItem: "Fake Brand Tag",
+    reason: "Counterfeit Item",
+    description: "Brand tag appears to be fake or altered",
+    reportDate: "2024-03-04",
+    status: "pending",
+    priority: "high"
+  },
+  {
+    id: 13,
+    reportedBy: "Sanya Roy",
+    reportedUser: "Vedant Kulkarni",
+    reportedItem: "Rude Communication",
+    reason: "Inappropriate Behavior",
+    description: "User was extremely rude during swap negotiation",
+    reportDate: "2024-03-03",
+    status: "dismissed",
+    priority: "low"
+  },
+  {
+    id: 14,
+    reportedBy: "Pooja Patel",
+    reportedUser: "Arjun Dey",
+    reportedItem: "Item Not Delivered",
+    reason: "Failed Transaction",
+    description: "User confirmed swap but never delivered the promised item",
+    reportDate: "2024-03-02",
+    status: "investigating",
+    priority: "high"
+  },
+  {
+    id: 15,
+    reportedBy: "Simran Ahuja",
+    reportedUser: "Yash Agarwal",
+    reportedItem: "Poor Quality Photos",
+    reason: "Misleading Images",
+    description: "Photos don't accurately represent the actual item condition",
+    reportDate: "2024-03-01",
+    status: "resolved",
+    priority: "medium"
+  },
+  {
+    id: 16,
+    reportedBy: "Trisha Nambiar",
+    reportedUser: "Sahil Rastogi",
+    reportedItem: "Late Response",
+    reason: "Communication Issue",
+    description: "User takes too long to respond and delays swap process",
+    reportDate: "2024-02-28",
+    status: "dismissed",
+    priority: "low"
+  },
+  {
+    id: 17,
+    reportedBy: "Nidhi Chauhan",
+    reportedUser: "Manav Shetty",
+    reportedItem: "Wrong Color",
+    reason: "Item Not as Described",
+    description: "Item color is completely different from what was shown",
+    reportDate: "2024-02-27",
+    status: "pending",
+    priority: "medium"
+  },
+  {
+    id: 18,
+    reportedBy: "Ria Sen",
+    reportedUser: "Sana Khan",
+    reportedItem: "Stained Clothing",
+    reason: "Item Condition",
+    description: "Item has permanent stains not mentioned in description",
+    reportDate: "2024-02-26",
+    status: "investigating",
+    priority: "medium"
+  },
+  {
+    id: 19,
+    reportedBy: "Abhishek Das",
+    reportedUser: "Avni Solanki",
+    reportedItem: "Fake Profile",
+    reason: "Account Issue",
+    description: "Suspect this is a fake profile with stolen photos",
+    reportDate: "2024-02-25",
+    status: "pending",
+    priority: "high"
+  },
+  {
+    id: 20,
+    reportedBy: "Swati Mishra",
+    reportedUser: "Rehan Siddiqui",
+    reportedItem: "Broken Zipper",
+    reason: "Item Damaged",
+    description: "Jacket zipper is completely broken, making it unwearable",
+    reportDate: "2024-02-24",
+    status: "resolved",
+    priority: "medium"
   }
 ];
 

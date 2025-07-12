@@ -96,6 +96,146 @@ const mockSwaps = [
     requestDate: "2024-03-10",
     status: "pending",
     category: "Accessories"
+  },
+  {
+    id: 7,
+    fromUser: "Farhan Shaikh",
+    toUser: "Isha Reddy",
+    fromItem: "Cotton Kurta",
+    toItem: "Silk Saree",
+    requestDate: "2024-03-09",
+    status: "completed",
+    category: "Traditional"
+  },
+  {
+    id: 8,
+    fromUser: "Deepak Malhotra",
+    toUser: "Priya Bhattacharya",
+    fromItem: "Business Suit",
+    toItem: "Evening Gown",
+    requestDate: "2024-03-08",
+    status: "accepted",
+    category: "Formal"
+  },
+  {
+    id: 9,
+    fromUser: "Neeraj Kapoor",
+    toUser: "Sanya Roy",
+    fromItem: "Winter Jacket",
+    toItem: "Summer Dress",
+    requestDate: "2024-03-07",
+    status: "pending",
+    category: "Seasonal"
+  },
+  {
+    id: 10,
+    fromUser: "Vedant Kulkarni",
+    toUser: "Pooja Patel",
+    fromItem: "Sports Wear",
+    toItem: "Casual Top",
+    requestDate: "2024-03-06",
+    status: "in_progress",
+    category: "Activewear"
+  },
+  {
+    id: 11,
+    fromUser: "Arjun Dey",
+    toUser: "Simran Ahuja",
+    fromItem: "Designer Watch",
+    toItem: "Jewelry Set",
+    requestDate: "2024-03-05",
+    status: "completed",
+    category: "Accessories"
+  },
+  {
+    id: 12,
+    fromUser: "Yash Agarwal",
+    toUser: "Trisha Nambiar",
+    fromItem: "Leather Shoes",
+    toItem: "High Heels",
+    requestDate: "2024-03-04",
+    status: "cancelled",
+    category: "Footwear"
+  },
+  {
+    id: 13,
+    fromUser: "Sahil Rastogi",
+    toUser: "Nidhi Chauhan",
+    fromItem: "Denim Shirt",
+    toItem: "Crop Top",
+    requestDate: "2024-03-03",
+    status: "pending",
+    category: "Casual"
+  },
+  {
+    id: 14,
+    fromUser: "Manav Shetty",
+    toUser: "Ria Sen",
+    fromItem: "College Hoodie",
+    toItem: "Cardigan",
+    requestDate: "2024-03-02",
+    status: "accepted",
+    category: "Students"
+  },
+  {
+    id: 15,
+    fromUser: "Harshit Jain",
+    toUser: "Sana Khan",
+    fromItem: "Running Shoes",
+    toItem: "Ballet Flats",
+    requestDate: "2024-03-01",
+    status: "completed",
+    category: "Footwear"
+  },
+  {
+    id: 16,
+    fromUser: "Abhishek Das",
+    toUser: "Avni Solanki",
+    fromItem: "Polo Shirt",
+    toItem: "Maxi Dress",
+    requestDate: "2024-02-28",
+    status: "in_progress",
+    category: "Smart Casual"
+  },
+  {
+    id: 17,
+    fromUser: "Kartik Menon",
+    toUser: "Swati Mishra",
+    fromItem: "Blazer Jacket",
+    toItem: "Office Wear",
+    requestDate: "2024-02-27",
+    status: "pending",
+    category: "Professional"
+  },
+  {
+    id: 18,
+    fromUser: "Rehan Siddiqui",
+    toUser: "Divya Gupta",
+    fromItem: "Traditional Vest",
+    toItem: "Ethnic Dupatta",
+    requestDate: "2024-02-26",
+    status: "accepted",
+    category: "Traditional"
+  },
+  {
+    id: 19,
+    fromUser: "Karan Sethi",
+    toUser: "Anjali Rane",
+    fromItem: "Gym Shorts",
+    toItem: "Yoga Pants",
+    requestDate: "2024-02-25",
+    status: "completed",
+    category: "Activewear"
+  },
+  {
+    id: 20,
+    fromUser: "Mohit Rao",
+    toUser: "Natasha Pillai",
+    fromItem: "Weekend Wear",
+    toItem: "Party Outfit",
+    requestDate: "2024-02-24",
+    status: "cancelled",
+    category: "Lifestyle"
   }
 ];
 
